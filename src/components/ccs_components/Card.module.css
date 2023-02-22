@@ -1,0 +1,72 @@
+.cardDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 20rem;
+    padding: 1.5rem;
+
+    background-color: #34495e;
+    border: .5rem solid black;
+    border-radius: 18px;
+    box-shadow: 6px 6px 16px rgba(0,0,0,0.9);
+    
+    transition: 0.5s ease;
+    
+}
+
+.cardDiv:hover{
+    transform: scale(1.03);
+    box-shadow: 6px 6px 16px rgba(0,0,0,0.6);
+}
+
+.buttonClose{
+    cursor: pointer;
+    background-color: #808e9b;
+    width: 2rem;
+    height: 1.5rem;
+    border-radius: .5rem;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-weight: bold;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+    margin-top: -15px;
+    margin-right: -15px;
+}
+
+
+
+.buttonClose:hover{
+    background-color: red;
+    transition: .3s;
+}
+
+.imgCard{
+    border: 3px solid black;
+    border-radius: 10px;
+    
+    
+}
+
+.text{
+    /* border: 2px solid black; */
+    display: flex;
+    align-self: flex-start;
+    margin-bottom: -10px;
+    padding-right: 2rem;
+}
+
+.type{
+    /* border: 1px solid red; */
+    padding-right: 5rem;
+    color: tomato;
+}
+
+.info{
+    /* border: 1px solid green; */
+    color: yellow;
+
+}

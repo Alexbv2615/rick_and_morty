@@ -1,11 +1,20 @@
+import styles from "./ccs_components/Card.module.css";
+
+
 export default function Card({name, species, gender, image, onClose}) {
    return (
-      <div>
-         <button onClick={onClose}>X</button>
-         <h2>{name}</h2>
-         <h2>{species}</h2>
-         <h2>{gender}</h2>
-         <img  src={image} alt={name} />
+      <div className={styles.cardDiv}>
+         <button className={styles.buttonClose} onClick={onClose}>X</button>      
+         <img className={styles.imgCard} src={image} alt={name} />
+         <div className={styles.text}>
+            <p className={styles.type}>Name:</p><p className={styles.info}>{name}</p>
+         </div>
+         <div className={styles.text}>
+            <p className={styles.type}>Specie:</p><p className={styles.info}>{species}</p>
+         </div>
+         <div className={styles.text}>
+            <p className={styles.type}>Gender: </p><p className={styles.info}>{gender}</p>
+         </div>
       </div>
    );
 }
