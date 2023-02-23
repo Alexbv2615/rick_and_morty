@@ -1,5 +1,8 @@
 .cardsdiv{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 2rem;
+    gap: 25px;
 }

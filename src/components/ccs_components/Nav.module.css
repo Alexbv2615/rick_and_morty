@@ -1,0 +1,57 @@
+.divNav{
+    border: 2px solid #c7ecee;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-top: -.7rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #130f40;    
+}
+
+.searchBar{
+    position: absolute;
+    padding: 5px;
+    top: 1.5rem;
+    right: 4rem;
+}
+
+.searchBar input{
+    width: 0px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: black;
+    outline: none;
+    border: 1px solid green;
+    border-radius: 30px;
+    transition: all 0.6s ease;
+}
+
+.searchBar div{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #dff9fb;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid #6ab04c;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.searchBar:hover input{
+    width: 350px;
+}
+
+.searchBar input:focus{
+    width: 350px;
+}
+
+.searchBar div img{
+    width: 20px;
+}

@@ -3,21 +3,20 @@
     flex-direction: column;
     align-items: center;
 
-    width: 20rem;
+    width: 15rem;
     padding: 1.5rem;
 
-    background-color: #34495e;
-    border: .5rem solid black;
+    background-image: url('https://p4.wallpaperbetter.com/wallpaper/235/956/988/space-deep-you-are-wallpaper-preview.jpg');
+    border: .3rem solid #ffa801;
     border-radius: 18px;
-    box-shadow: 6px 6px 16px rgba(0,0,0,0.9);
-    
+    box-shadow: 6px 6px 16px white;
     transition: 0.5s ease;
     
 }
 
 .cardDiv:hover{
     transform: scale(1.03);
-    box-shadow: 6px 6px 16px rgba(0,0,0,0.6);
+    box-shadow: 6px 6px 16px yellow;
 }
 
 .buttonClose{
@@ -26,7 +25,7 @@
     width: 2rem;
     height: 1.5rem;
     border-radius: .5rem;
-    border: 3px solid black;
+    border: 2px solid #808e9b;
     justify-content: center;
     align-items: center;
     color: black;
@@ -41,32 +40,38 @@
 
 .buttonClose:hover{
     background-color: red;
-    transition: .3s;
+    transition: .3s ;
 }
 
 .imgCard{
-    border: 3px solid black;
+    /* border: 3px solid white; */
     border-radius: 10px;
-    
+    width: 14rem;
     
 }
 
 .text{
-    /* border: 2px solid black; */
+    /* border: 2px solid white; */
     display: flex;
     align-self: flex-start;
-    margin-bottom: -10px;
+    margin-bottom: -20px;
     padding-right: 2rem;
 }
 
 .type{
     /* border: 1px solid red; */
     padding-right: 5rem;
-    color: tomato;
+    color: white;
+    text-shadow: 2px 2px  15px red; 
+    font-size: 20px;
 }
 
 .info{
     /* border: 1px solid green; */
     color: yellow;
+    text-shadow: 2px 2px  15px white; 
+    font-size: 20px;
+    white-space: nowrap;
+    margin-left: -2rem;
 
 }
