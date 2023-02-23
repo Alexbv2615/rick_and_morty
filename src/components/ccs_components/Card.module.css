@@ -7,7 +7,7 @@
     padding: 1.5rem;
 
     background-image: url('https://p4.wallpaperbetter.com/wallpaper/235/956/988/space-deep-you-are-wallpaper-preview.jpg');
-    border: .3rem solid #ffa801;
+    border: .3rem solid #ffbf00;
     border-radius: 18px;
     box-shadow: 6px 6px 16px white;
     transition: 0.5s ease;
@@ -71,7 +71,9 @@
     color: yellow;
     text-shadow: 2px 2px  15px white; 
     font-size: 20px;
-    white-space: nowrap;
+    white-space: wrap;
+    width: 9rem;
+    text-align: left;
     margin-left: -2rem;
 
 }

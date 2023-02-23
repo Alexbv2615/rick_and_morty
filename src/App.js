@@ -29,11 +29,16 @@ function App () {
       characters.filter(pers => pers.id !== id)
     )
   }
+
+  const onRandom = () => {
+    let random = Math.floor(Math.random() * (826 - 1) + 1);
+    onSearch(random);
+  }
   
 
   return (
     <div className='App' style={{ padding: '25px' }}>
-      <Nav onSearch={onSearch}/>
+      <Nav onSearch={onSearch} onRandom={onRandom}/>
         <hr/>
       <div>
         <Cards onClose={onClose} characters={characters}/>
