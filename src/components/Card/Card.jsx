@@ -1,4 +1,4 @@
-import styles from "./ccs_components/Card.module.css";
+import styles from "./Card.module.css";
 
 
 export default function Card({name, species, gender, image, onClose}) {

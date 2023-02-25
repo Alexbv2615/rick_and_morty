@@ -1,5 +1,5 @@
-import SearchBar from "./SearchBar";
-import styles from './ccs_components/Nav.module.css';
+import SearchBar from '../SearchBar/SearchBar';
+import styles from './Nav.module.css';
 
 export default function Nav({onSearch, onRandom}){
     return(
