@@ -7,12 +7,15 @@ export default function Nav({onSearch, onRandom}){
         <nav className={styles.divNav}>
             <div className={styles.divButtons}>
                 <NavLink to='/'>
+                    <button>Logout</button>
+                </NavLink>
+                <NavLink to='/home'>
                     <button>Home</button>
                 </NavLink>
                 <NavLink to='/About'>
                     <button>About</button>
                 </NavLink>
-                <NavLink to='/'>
+                <NavLink to='/home'>
                     <button onClick={onRandom}>Random Character</button>
                 </NavLink>
             </div>
