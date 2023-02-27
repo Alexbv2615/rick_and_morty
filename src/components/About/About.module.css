@@ -1,0 +1,28 @@
+.container{
+    border: 2px solid white;
+    border-radius: 1rem;
+    color: white;
+    padding-bottom: 2rem;
+    margin-top: 4rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    background-color: rgba(0, 0, 0, 0.815);
+}
+
+.title{
+    margin-top: 2rem;
+    color: white;
+    text-shadow: 2px 2px 15px gray;
+}
+
+.container img{
+    margin-top: 2rem;
+    border-radius: 1rem;
+    border: .3rem solid white;
+}
+
+.text p{
+    margin-left: 8rem;
+    margin-right: 8rem;
+    margin-top: 3rem;
+}

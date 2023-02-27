@@ -1,0 +1,73 @@
+.container{
+    /* border: 2px solid white; */
+    border-radius: 1rem;
+    color: white;
+    padding: 2rem;
+    
+    margin-top: 4rem;
+    margin-left: 15rem;
+    margin-right: 15rem;
+    background-color: rgba(0, 0, 0, 0.815);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divType{
+    /* border: 2px solid red; */
+    color: gold;
+    margin-right: 3rem;
+    text-align: left;
+    
+}
+
+.divInfo{
+    /* border: 2px solid red; */
+    color: white;
+    margin-right: 2rem;
+    text-align: left;
+    margin-right: 1rem;
+}
+
+.alive{
+    color: green;
+    text-shadow: 1px 1px 10px green;
+}
+
+.dead{
+    color: red;
+    text-shadow: 1px 1px 10px red;
+}
+
+.male{
+    color: blue;
+    text-shadow: 1px 1px 10px blue;
+}
+
+.female{
+    color: #fd79a8;
+    text-shadow: 1px 1px 10px #fd79a8;
+}
+
+.unknown{
+    color: yellow;
+    text-shadow: 1px 1px 10px yellow;
+}
+
+.divImg img{
+    border: 2px solid white;
+    border-radius: 1rem;
+}
+
+.border{
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.detail{
+    display:flex;
+    flex-direction: row;
+}

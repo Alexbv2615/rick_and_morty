@@ -1,6 +1,7 @@
 import Card from '../Card/Card.jsx';
 import styles from './Cards.module.css';
 
+
 export default function Cards({ characters, onClose }) {
    return (
       <div className={styles.cardsdiv}>
@@ -12,6 +13,7 @@ export default function Cards({ characters, onClose }) {
                species = {species}
                gender = {gender}
                image = {image}
+               id = {id}
                onClose ={() => onClose(id)}
                />
             })
