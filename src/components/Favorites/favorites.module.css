@@ -28,30 +28,6 @@
     box-shadow: 6px 6px 16px yellow;
 }
 
-.buttonClose{
-    cursor: pointer;
-    background-color: #808e9b;
-    width: 2rem;
-    height: 1.5rem;
-    border-radius: .5rem;
-    border: 2px solid #808e9b;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    font-weight: bold;
-    align-self: flex-end;
-    margin-bottom: 1rem;
-    margin-top: -15px;
-    margin-right: -15px;
-}
-
-
-
-.buttonClose:hover{
-    background-color: red;
-    transition: .3s ;
-}
-
 .imgCard{
     /* border: 3px solid white; */
     border-radius: 10px;
@@ -93,18 +69,24 @@
     text-decoration: none;
 }
 
-.isFav{
-    background: none;
-    font-size: 20px;
-    border: none;
-    align-self: flex-start;
-    margin-top: -15px;
-    margin-bottom: -15px;
-    margin-left: -15px;
-    cursor: pointer;
+.select{
+    padding: 5px;
+    margin: 1rem;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: 2px solid blue;
+    box-shadow: 1px 1px 10px aqua;
+    border-radius: 6px;
     transition: 0.6s ease;
 }
 
-.isFav:hover{
-    scale: calc(1.3);
+.select:hover {
+    color: gold;
+}
+
+.select option{
+    background-color: white;
+    color: black;
 }
