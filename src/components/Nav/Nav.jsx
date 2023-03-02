@@ -18,6 +18,9 @@ export default function Nav({onSearch, onRandom}){
                 <NavLink to='/home'>
                     <button onClick={onRandom}>Random Character</button>
                 </NavLink>
+                <NavLink to='/favorites'>
+                    <button>Favorites</button>
+                </NavLink>
             </div>
             <div className={styles.logoDiv}>
                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Rick_and_Morty.svg/2560px-Rick_and_Morty.svg.png" alt="logo" />

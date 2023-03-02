@@ -5,8 +5,9 @@ import Nav from './components/Nav/Nav.jsx';
 import {Routes, Route, useLocation, useNavigate} from 'react-router-dom';
 import About from './components/About/About.jsx';
 import Detail from './components/Detail/Detail.jsx';
-import Error from './components/Error/Error.jsx'; 
+import { Error } from './components/Error/Error.jsx'; 
 import Form from './components/Form/Form.jsx';
+import { Favorites } from './components/Favorites/Favorites';
 
 function App () {
 
@@ -17,6 +18,7 @@ function App () {
   const username = 'alexbv2615@gmail.com';
   const password = '123123'; 
 
+  
   const login = (userData) => {
     if(userData.username === username && userData.password === password){
       setAccess(true);
@@ -25,11 +27,11 @@ function App () {
       alert('No existe esta cuenta');
     }
   }
-
+  
   useEffect(() => {
     !access && navigate('/');
-  }, [access]);
-
+  }, [access, navigate]);
+  
   const onSearch = (character) => {
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
       .then((response) => response.json())
@@ -66,6 +68,7 @@ function App () {
         <Route path='/home' element={<Cards onClose={onClose} characters={characters}/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/detail/:detailId' element={<Detail />}/>
+        <Route path='/favorites' element={<Favorites />}/>
         <Route path='/:error' element={<Error />} />
       </Routes> 
     </div>
