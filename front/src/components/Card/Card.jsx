@@ -14,7 +14,7 @@ export const Card = ({name, species, gender, image, onClose, id,  myFavorites, a
             setIsFav(true);
          }
       });
-   }, [myFavorites]);
+   }, [myFavorites, id]);
 
    const handleFavorite = () => {
       if(isFav === true){
