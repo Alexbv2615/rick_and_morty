@@ -29,12 +29,20 @@
     margin-bottom: 1rem;
 }
 
-.form input{
+.inputNormal{
     border-radius: 1rem;
     padding: 4px;
     width: 240px;
     background-color:#c7ecee;
-    border: 2px solid whitesmoke;
+    border: 2px solid green;
+}
+
+.inputError{
+    border-radius: 1rem;
+    padding: 4px;
+    width: 240px;
+    background-color:#c7ecee;
+    border: 2px solid red;
 }
 
 .error{

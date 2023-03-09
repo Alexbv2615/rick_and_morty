@@ -39,12 +39,12 @@ const Form = ({login}) => {
             <h1>Welcome to my Rick and Morty app 🚀</h1>
             <div>
                 <label htmlFor="username">Username 😺</label>
-                <input type="text" name='username' value={userData.username} autoComplete='off' onChange={handleInputChange} />
+                <input className={errors.username ? styles.inputError : styles.inputNormal} type="text" name='username' value={userData.username} autoComplete='off' onChange={handleInputChange} />
                 {errors.username && <p className={styles.error}>{errors.username}</p>}
             </div>
             <div>
                 <label htmlFor="password">Password 🤐</label>
-                <input type="password" name='password' value={userData.password} onChange={handleInputChange} />
+                <input className={errors.password ? styles.inputError : styles.inputNormal} type="password" name='password' value={userData.password} onChange={handleInputChange} />
                 {errors.password && <p className={styles.error}>{errors.password}</p>}
             </div>
             <div>

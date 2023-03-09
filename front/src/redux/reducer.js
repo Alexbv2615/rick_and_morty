@@ -19,7 +19,8 @@ export const reducer = (state = initialState, action) => {
             let filterFavorite = state.myFavorites.filter(pers => pers.id !== action.payload);
             return {
                 ...state,
-                myFavorites: filterFavorite
+                myFavorites: filterFavorite,
+                allCharacters: filterFavorite
             }
 
         case FILTER:    
