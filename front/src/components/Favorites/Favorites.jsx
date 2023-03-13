@@ -38,7 +38,7 @@ export const Favorites = () => {
             {
                 myFavorites.map((character) => {
                     return(
-                        <div className={styles.cardDiv}>
+                        <div key={character.id} className={styles.cardDiv}>
                         
                             <NavLink to={`/detail/${character.id}`} className={styles.navlink}>  
                             <img className={styles.imgCard} src={character.image} alt={character.name} />

@@ -11,16 +11,15 @@ export const reducer = (state = initialState, action) => {
         case ADD_FAVORITE:
             return {
                 ...state,
-                myFavorites: state.myFavorites.indexOf(action.payload) < 0 ? [...state.allCharacters, action.payload] : [...state.allCharacters],
-                allCharacters: [...state.allCharacters, action.payload]
+                myFavorites: action.payload,
+                allCharacters: action.payload
             }
 
         case DELETE_FAVORITE:
-            let filterFavorite = state.myFavorites.filter(pers => pers.id !== action.payload);
             return {
                 ...state,
-                myFavorites: filterFavorite,
-                allCharacters: filterFavorite
+                myFavorites: action.payload,
+                allCharacters: action.payload
             }
 
         case FILTER:    

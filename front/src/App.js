@@ -8,10 +8,15 @@ import Detail from './components/Detail/Detail.jsx';
 import { Error } from './components/Error/Error.jsx'; 
 import Form from './components/Form/Form.jsx';
 import { Favorites } from './components/Favorites/Favorites';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteFavorite } from './redux/actions';
+import axios from 'axios';
 
 function App () {
 
   const [characters, setCharacters] = useState([]);
+  const { myFavorites } = useSelector(state => state)
+  const dispatch = useDispatch()
   const location = useLocation();
   const navigate = useNavigate();
   const [access, setAccess] = useState(false);
@@ -33,9 +38,9 @@ function App () {
   }, [access, navigate]);
   
   const onSearch = (character) => {
-    fetch(`http://localhost:3001/rickandmorty/onsearch/${character}`)
-      .then((response) => response.json())
-      .then((data) => {
+    axios(`http://localhost:3001/rickandmorty/onsearch/${character}`)
+      .then((response) => response.data)
+      .then(data => {
          if (data.name) {
             let exist = characters.find((e) => e.id === data.id);
             if(exist){
@@ -52,7 +57,11 @@ function App () {
   const onClose = (id) => {
     setCharacters(
       characters.filter(pers => pers.id !== id)
-    )
+    );
+    let charfind = myFavorites.find(char => char.id === id);
+    if(charfind){
+      dispatch(deleteFavorite(id));
+    };
   }
 
   const onRandom = () => {
