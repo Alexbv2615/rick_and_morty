@@ -1,8 +1,9 @@
-import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER } from "./actions-types";
+import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER, ERROR, GET_FAVORITES } from "./actions-types";
 
 const initialState = {
     myFavorites: [],
-    allCharacters: []
+    allCharacters: [],
+    errors: {}
 };
 
 export const reducer = (state = initialState, action) => {
@@ -12,15 +13,17 @@ export const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 myFavorites: action.payload,
-                allCharacters: action.payload
-            }
+                allCharacters: action.payload,
+                errors: {}
+            };
 
         case DELETE_FAVORITE:
             return {
                 ...state,
                 myFavorites: action.payload,
-                allCharacters: action.payload
-            }
+                allCharacters: action.payload,
+                errors: {}
+            };
 
         case FILTER:    
             const allCharacFilter = state.allCharacters.filter(charac => charac.gender === action.payload);
@@ -34,7 +37,7 @@ export const reducer = (state = initialState, action) => {
                     ...state,
                     myFavorites: allCharacFilter
                 }
-            }
+            };
 
         case ORDER:
             return {
@@ -42,9 +45,21 @@ export const reducer = (state = initialState, action) => {
                 myFavorites: action.payload === 'Ascendente'
                 ? state.allCharacters.sort((a, b) => a.id - b.id)
                 : state.allCharacters.sort((a, b) => b.id - a.id)
+            };
+        
+        case GET_FAVORITES:
+            return {
+                ...state,
+                myFavorites: action.payload,
+                errors: {}
+            };
+            
+        case ERROR:
+            return {
+                ...state,
+                errors: action.payload
             }
 
-            
         default:
             return {...state}
     }

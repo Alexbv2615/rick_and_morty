@@ -1,25 +1,36 @@
-import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER } from "./actions-types";
+import { ADD_FAVORITE, DELETE_FAVORITE, FILTER, ORDER, ERROR, GET_FAVORITES } from "./actions-types";
 import axios from 'axios';
 
 export const addFavorite = (character) => {
-    return function(dispatch){
-        axios.post("http://localhost:3001/rickandmorty/favs/create", character)
-        .then(res => {
-            return dispatch(
-                {type: ADD_FAVORITE, payload: res.data}
-            );
-        })
+    return async function(dispatch){
+       try {
+        const response = await axios.post("http://localhost:3001/rickandmorty/favs/create", character);
+        return dispatch({type: ADD_FAVORITE, payload: response.data});
+       } catch (error) {
+        return dispatch({type: ERROR, payload: error});
+       }; 
     };
 };
 
 export const deleteFavorite = (id) => {
-    return function(dispatch){
-        axios.delete("http://localhost:3001/rickandmorty/favs/delete/" + id)
-        .then(res => {
-            return dispatch(
-                { type: DELETE_FAVORITE, payload: res.data } 
-            );
-        });
+    return async function(dispatch){
+       try {
+        const response = await axios.delete("http://localhost:3001/rickandmorty/favs/delete/" + id);
+        return dispatch({ type: DELETE_FAVORITE, payload: response.data });
+       } catch (error) {
+        return dispatch({type: ERROR, payload: error});
+       };
+    };
+};
+
+export const getFavorites = () => {
+    return async function(dispatch){
+        try {
+            const response = await axios.get("http://localhost:3001/rickandmorty/favs/get");
+            return dispatch({type: GET_FAVORITES, payload: response.data});
+        } catch (error) {
+            return dispatch({type: ERROR, payload: error});
+        };
     };
 };
 
