@@ -17,18 +17,9 @@
 
 // }).listen(3001, 'localhost')
 
-const express = require('express');
-const server = express();
 const PORT = 3001;
-const router = require('./routes/index');
-const cors = require('cors');
-const morgan = require('morgan');
-
-server.use(express.json());
-server.use(cors());
-server.use(morgan('dev'));
-server.use('/rickandmorty', router);
+const server = require('./App');
 
 server.listen(PORT, () => {
-    console.log(`Server raised in port ${PORT}`);
+    console.log('Server raised in port: 3001')
 });

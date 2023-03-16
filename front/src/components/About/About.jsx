@@ -12,7 +12,7 @@ export default function About(){
                     jugar videojuegos 🕹️, mi comida favorita es la pizza 🍕, y tambien me gustan los gatos 😸.
                 </p>
                 <p align='left'>
-                    Esta App de Rick and Morty fue creada con React, Redux, y con conocimientos en JavaScript, HTML y CSS,
+                    Esta App de Rick and Morty fue creada con distintos Frameworks como React, Redux, Express, Axios, Jest y con conocimientos en JavaScript, HTML y CSS,
                     en esta App puedes encontrar todo los personajes de la serie, como sus detalles de cada uno de ellos.
                 </p>
                 <p align='left'>
