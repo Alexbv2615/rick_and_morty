@@ -19,7 +19,13 @@
 
 const PORT = 3001;
 const server = require('./App');
+const { sequelize } = require('./DB_connection');
+const { saveApiData } = require('./controllers/saveApiData');
 
-server.listen(PORT, () => {
-    console.log('Server raised in port: 3001')
+sequelize.sync({ force: true }).then(async () => {
+    console.log('DB conectada, master');
+    await saveApiData();
+    server.listen(PORT, () => {
+        console.log('Server raised in port: 3001')
+    });
 });

@@ -24,6 +24,8 @@
 
 // module.exports = getCharById;
 
+//CREANDO CON ASYNC AWAIT
+
 const URL = "https://rickandmortyapi.com/api/character/";
 const axios = require('axios');
 
